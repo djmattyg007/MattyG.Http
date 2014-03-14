@@ -1,4 +1,4 @@
-The MattyG HTTP Library
+The MattyG PHP HTTP Library
 
 This module is a pair of classes designed for use with PHP web projects and
 APIs that operate over the HTTP protocol. It contains two classes, Request
