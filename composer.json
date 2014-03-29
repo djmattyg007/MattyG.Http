@@ -2,7 +2,7 @@
     "name": "mattyg/http",
     "type": "library",
     "description": "A pair of generic classes related to working with data over the HTTP protocol.",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "time": "2014-03-16",
     "keywords": [
         "http",

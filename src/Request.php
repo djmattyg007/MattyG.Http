@@ -35,7 +35,23 @@ class Request
      * @param string|null $key
      * @return array|mixed|null
      */
-    public function getQuery($key = null)
+    public function getServerVar($key = null)
+    {
+        if ($key === null) {
+            return $this->server;
+        }
+        if (isset($this->server[$key])) {
+            return $this->server[$key];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * @param string|null $key
+     * @return array|mixed|null
+     */
+    public function getQueryVar($key = null)
     {
         if ($key === null) {
             return $this->get;
@@ -51,7 +67,7 @@ class Request
      * @param string|null $key
      * @return array|mixed|null
      */
-    public function getPost($key = null)
+    public function getPostVar($key = null)
     {
         if ($key === null) {
             return $this->post;
@@ -71,9 +87,20 @@ class Request
         return $this->server["REQUEST_METHOD"];
     }
 
+    /**
+     * @return string
+     */
     public function getRequestTime()
     {
         return $this->server["REQUEST_TIME"];
+    }
+
+    /**
+     * @return string
+     */
+    public function getRequestUri()
+    {
+        return $this->server["REQUEST_URI"];
     }
 
     /**
