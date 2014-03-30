@@ -110,5 +110,13 @@ class Request
     {
         return isset($this->server["HTTP_X_REQUESTED_WITH"]) && $this->server["HTTP_X_REQUESTED_WITH"] === "XMLHttpRequest";
     }
+
+    /**
+     * @return bool
+     */
+    public function isSecure()
+    {
+        return (isset($this->server["HTTPS"]) && $this->server["HTTPS"] === "on");
+    }
 }
 
